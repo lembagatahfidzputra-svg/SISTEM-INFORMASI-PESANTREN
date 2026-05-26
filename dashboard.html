@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pesantren</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      display:flex;
+      background:#f1f5f9;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar{
+      width:250px;
+      height:100vh;
+      background:#0f172a;
+      color:white;
+      padding:20px;
+      position:fixed;
+    }
+
+    .sidebar h2{
+      margin-bottom:30px;
+      text-align:center;
+    }
+
+    .menu{
+      list-style:none;
+    }
+
+    .menu li{
+      margin:15px 0;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      padding:12px;
+      display:block;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      background:#0f766e;
+    }
+
+    /* MAIN */
+
+    .main{
+      margin-left:250px;
+      width:100%;
+      padding:30px;
+    }
+
+    .topbar{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom:30px;
+    }
+
+    .topbar h1{
+      color:#0f172a;
+    }
+
+    /* CARD */
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#64748b;
+    }
+
+    .card h1{
+      color:#0f766e;
+      font-size:35px;
+    }
+
+    /* TABLE */
+
+    .table-box{
+      margin-top:30px;
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:15px;
+    }
+
+    table th,
+    table td{
+      padding:12px;
+      border-bottom:1px solid #ddd;
+      text-align:left;
+    }
+
+    table th{
+      background:#0f766e;
+      color:white;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <h2>🕌 SIM Pesantren</h2>
+
+    <ul class="menu">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Data Santri</a></li>
+      <li><a href="#">Absensi</a></li>
+      <li><a href="#">Tahfidz</a></li>
+      <li><a href="#">Keuangan</a></li>
+      <li><a href="#">Jadwal</a></li>
+      <li><a href="#">Laporan</a></li>
+      <li><a href="#">Pengaturan</a></li>
+    </ul>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+      <h1>Dashboard</h1>
+
+      <div>
+        Admin Pesantren
+      </div>
+    </div>
+
+    <!-- CARD -->
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Total Santri</h3>
+        <h1>320</h1>
+      </div>
+
+      <div class="card">
+        <h3>Total Ustadz</h3>
+        <h1>25</h1>
+      </div>
+
+      <div class="card">
+        <h3>Hafalan Hari Ini</h3>
+        <h1>87</h1>
+      </div>
+
+      <div class="card">
+        <h3>Pembayaran Masuk</h3>
+        <h1>12</h1>
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-box">
+
+      <h2>Aktivitas Terbaru</h2>
+
+      <table>
+
+        <tr>
+          <th>Nama</th>
+          <th>Aktivitas</th>
+          <th>Tanggal</th>
+        </tr>
+
+        <tr>
+          <td>Ahmad Fauzi</td>
+          <td>Setor Hafalan</td>
+          <td>23 Mei 2026</td>
+        </tr>
+
+        <tr>
+          <td>Muhammad Ali</td>
+          <td>Pembayaran SPP</td>
+          <td>23 Mei 2026</td>
+        </tr>
+
+        <tr>
+          <td>Abdullah</td>
+          <td>Absensi Masuk</td>
+          <td>23 Mei 2026</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

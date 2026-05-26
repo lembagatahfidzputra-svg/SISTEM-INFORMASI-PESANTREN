@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login SIM Pesantren</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      background-image:url('https://img.magnific.com/foto-gratis/latar-belakang-cat-air-yang-digambar-tangan-dengan-bentuk-langit-dan-awan_24972-1095.jpg?semt=ais_hybrid&w=740&q=80');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .login-box{
+      width:350px;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      padding:30px;
+      border-radius:15px;
+      color:darkgrey;
+      box-shadow:0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .login-box h1{
+      text-align:center;
+      margin-bottom:25px;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+    }
+
+    .input-box label{
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:12px;
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:8px;
+      outline:none;
+    }
+
+
+    .btn-login{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:#0f766e;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    .btn-login:hover{
+      background:#115e59;
+    }
+
+    .logo{
+      text-align:center;
+      margin-bottom:15px;
+      font-size:40px;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="login-box">
+
+    <div class="logo">
+      🕌
+    </div>
+
+    <h1>Login Pesantren</h1>
+
+    <div class="input-box">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Masukkan username">
+    </div>
+
+    <div class="input-box">
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Masukkan password">
+    </div>
+
+    <button class="btn-login" onclick="login()">
+  Masuk
+</button>
+
+  </div>
+  <script>
+
+  function login(){
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username == "admin" && password == "12345"){
+      window.location.href = "dashboard.html";
+    }else{
+      alert("Username atau Password salah!");
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
